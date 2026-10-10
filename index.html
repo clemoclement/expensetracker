@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>expensetracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>currencicexpensetracker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <h2>Expense Tracker</h2>
+        <p class="sub">Log each expense in the currency you paid in. Totals are converted into your home currency.</p>
+      </div>
+      <div class="home-pick">
+        <label for="home">Show everything in</label>
+        <select id="home"></select>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT: form + rates -->
+      <div>
+        <section class="panel">
+          <h2>Add an expense</h2>
+
+          <div class="field">
+            <label for="desc">What was it?</label>
+            <input type="text" id="desc" placeholder="Ramen near the station" maxlength="80">
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label for="amount">Amount paid</label>
+              <input type="number" id="amount" step="0.01" min="0" placeholder="0.00">
+            </div>
+            <div class="field">
+              <label for="cur">Currency</label>
+              <select id="cur"></select>
+            </div>
+          </div>
+
+          <div class="preview" id="preview"></div>
+
+          <div class="row2">
+            <div class="field">
+              <label for="cat">Category</label>
+              <select id="cat"></select>
+            </div>
+            <div class="field">
+              <label for="date">Date</label>
+              <input type="date" id="date">
+            </div>
+          </div>
+
+          <button class="primary" id="add" type="button">Add expense</button>
+          <p class="err" id="err"></p>
+        </section>
+
+        <section class="panel">
+          <h2>Exchange rates</h2>
+          <div class="status" id="status">Loading rates…</div>
+          <button id="refresh" type="button" style="margin-top:12px">Refresh rates</button>
+        </section>
+      </div>
+
+      <!-- RIGHT: summary + list -->
+      <div>
+        <section class="panel">
+          <div class="total">
+            <div>
+              <div class="cap">Total spent</div>
+              <div class="big" id="total">—</div>
+            </div>
+            <div class="cap" id="count"></div>
+          </div>
+          <div class="bar" id="bar"></div>
+          <ul class="legend" id="legend"></ul>
+        </section>
+
+        <section class="panel">
+          <div class="ledger-head">
+            <h2>Expenses</h2>
+            <button class="link" id="export" type="button">Export CSV</button>
+          </div>
+          <ul class="ledger" id="ledger"></ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
