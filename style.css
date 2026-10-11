@@ -1,12 +1,12 @@
 :root {
-  --bg: #E9EFF3;
+  --bg: hsl(80, 33%, 98%);
   --surface: #F8FAFB;
   --ink: #12202E;
   --muted: #5A6B7B;
   --line: #C9D5DE;
   --accent: #0B6E6E;
   --stamp: #B4351F;
-  --c1: #0B6E6E; --c2: #3D5A9E; --c3: #B4351F;
+  --c1: #0B6E6E; --c2: #3D5A9E; --c3: #701e18;
   --c4: #C98A12; --c5: #6E4A8E; --c6: #6B7C8A;
 }
 
