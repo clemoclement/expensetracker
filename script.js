@@ -1,5 +1,5 @@
 // ---------- Settings ----------
-const CATEGORIES = ["Food & drink", "Transport", "Lodging", "Shopping", "Work & software", "Other"];
+const CATEGORIES = ["Meals", "Purchases", "Drinks", "Logistics", "Accommodation", "Shopping", "Work", "Software", "Miscellaneous", "Other"];
 const COLORS = ["var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)", "var(--c5)", "var(--c6)"];
 
 // Rough rates, used only if the API fails and nothing is saved yet
