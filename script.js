@@ -69,7 +69,7 @@ function renderPreview() {
   const amount = parseFloat($("amount").value);
   const cur = $("cur").value;
   if (!(amount > 0)) {
-    $("preview").innerHTML = `<div class="from">Enter an amount to see it in ${home}.</div>`;
+    $("preview").innerHTML = `<div class="from">Enter amount paid to see it in ${home}.</div>`;
     return;
   }
   const converted = convert(amount, cur, home);
